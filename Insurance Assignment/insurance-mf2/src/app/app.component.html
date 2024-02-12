@@ -1,0 +1,20 @@
+<div>
+  <h2>Premium Payment Workflow</h2>
+  <ng-container *ngIf="premiumInformation">
+    <form #payEmiForm="ngForm" (submit)="payEmi(payEmiForm.value)">
+      <label for="insuranceName"><b>Insurance Name:</b></label>
+      <input disabled [(ngModel)]="premiumInformation.name" type="text" id="insuranceName" name="insuranceName" required>
+      <label for="premiumAmount"><b>Premium Amount:</b> <span style="color: red;">*</span></label>
+      <input ngModel #enteredAmount type="number" id="premiumAmount" name="premiumAmount" (keyup)="validateEmiValue(enteredAmount.value)" required><br>
+      <span *ngIf="errorMessage" class="error-message">{{ errorMessage }}</span>
+      <br>
+      
+      <ng-container *ngIf="showPayButton">
+        <button type="submit">Pay</button>
+      </ng-container>
+    
+    </form>
+  </ng-container>
+</div>
+
+

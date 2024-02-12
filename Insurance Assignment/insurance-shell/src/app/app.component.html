@@ -1,0 +1,32 @@
+
+<div class="container" [ngClass]="{ 'container-border': showLegendFlag}">&nbsp;
+  <div class="shellbanner" *ngIf="showLegendFlag">
+    <div class="banner">
+      <h5>This is Shell Application</h5>
+    </div>
+  </div>
+  <h1>New India Insurance Dashboard</h1>&nbsp; &nbsp; &nbsp; &nbsp;
+  <div class="mf-container" [ngClass]="{ 'mfe1-border': showLegendFlag}">&nbsp;
+    <div class="mfe1banner" *ngIf="showLegendFlag">
+      <div class="banner">
+        <h5>This is MFE 1 Application</h5>
+      </div>
+    </div>
+    <iframe id="mfe1Iframe" src="http://localhost:4201" width="600px" height="560px"></iframe>
+  </div>
+  <div class="divider">&nbsp;
+
+  </div>
+  <div class="mf-container" [ngClass]="{ 'mfe2-border': showLegendFlag}">&nbsp;
+    <div class="mfe2banner" *ngIf="showLegendFlag">
+      <div class="banner">
+        <h5>This is MFE 2 Application</h5>
+      </div>
+    </div>
+    <iframe id="mfe2Iframe" src="http://localhost:4202" width="600px" height="560px" ></iframe>
+  </div>
+  <div class="view-legend-button">
+    <div class="view-legend-message" *ngIf="showLegendFlag">Please continue to pay, it will not affect the payment process.</div>
+    <button id="viewLegendsBtn" (click)="showLegends()">View Legends</button>
+  </div>
+</div>

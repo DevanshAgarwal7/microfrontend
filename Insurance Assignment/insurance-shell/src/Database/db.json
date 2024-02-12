@@ -1,0 +1,28 @@
+{
+  "insurance": [
+    {
+      "id": "1",
+      "name": "Life Insurance",
+      "paidPremium": 572000,
+      "amountToPay": 358348,
+      "emiValue": 5000,
+      "paymentStatus": "Paid"
+    },
+    {
+      "id": "2",
+      "name": "Car Insurance",
+      "paidPremium": 465000,
+      "amountToPay": 235000,
+      "emiValue": 3000,
+      "paymentStatus": "Paid"
+    },
+    {
+      "id": "3",
+      "name": "Bike Insurance",
+      "paidPremium": 500000,
+      "amountToPay": 100000,
+      "emiValue": 2243,
+      "paymentStatus": "Pending"
+    }
+  ]
+}

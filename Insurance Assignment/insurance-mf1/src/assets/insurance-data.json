@@ -1,0 +1,7 @@
+[
+    {"name": "Life Insurance", "premium": 1000},
+    {"name": "Car Insurance", "premium": 500},
+    {"name": "Bike Insurance", "premium":700},
+    {"name": "Home Insurance", "premium":12000}
+
+]

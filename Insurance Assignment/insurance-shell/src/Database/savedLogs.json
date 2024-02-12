@@ -1,0 +1,26 @@
+{
+  "savedLogs": [
+    {
+      "name": "",
+      "date": "",
+      "time": "",
+      "id": "0c7a"
+    },
+    {
+      "id": "37cb",
+      "name": "Life Insurance",
+      "emiAmount": 5000,
+      "date": "Mon Feb 12 2024",
+      "time": "9:31:23 pm",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "df60",
+      "name": "Life Insurance",
+      "emiAmount": 5000,
+      "date": "Mon Feb 12 2024",
+      "time": "9:49:31 pm",
+      "status": "SUCCESS"
+    }
+  ]
+}

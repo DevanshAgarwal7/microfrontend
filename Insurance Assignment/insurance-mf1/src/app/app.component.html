@@ -1,0 +1,30 @@
+<div class="shell-component">
+  <h2>Insurance Details</h2>
+  <span class="mandatory-sign">*</span>
+  <select [(ngModel)]="selectedInsuranceId">
+    <option value="0">Select Insurance</option>
+    <ng-container *ngFor="let insurance of insuranceDetails">
+      <div *ngIf="insurance.emiValue > 0; then options"></div>
+      <ng-template #options>
+        <option  [value]="insurance.id">{{ insurance.name }}</option>
+      </ng-template>
+    </ng-container>
+  </select>&nbsp;
+  <button (click)="sendPayNotification()">Select</button>&nbsp;
+  <ng-container *ngIf="showSelectInsuranceMessage">
+    <div class="select-error-message">Please Select an Insurance Type</div>
+  </ng-container>
+
+  <ul>
+    <li *ngFor="let insurance of insuranceDetails">
+   <b>Insurance Name:</b> {{ insurance.name }} <br>
+   <b>Total Premium:</b> {{ insurance.paidPremium + insurance.amountToPay }} <br>
+   <b>Already Paid Premium:</b> {{ insurance.paidPremium }} <br>
+   <b>Premium To Pay:</b> {{ insurance.amountToPay }} <br>
+   <b>Montly EMI:</b> {{ insurance.emiValue }} <br>
+   <b>Payment Status:</b> <span [style.color]="getPaymentStatusColor(insurance.paymentStatus)"> 
+    {{ insurance.paymentStatus }}
+   </span>
+    </li>
+  </ul>
+</div>
